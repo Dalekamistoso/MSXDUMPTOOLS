@@ -1,0 +1,26 @@
+--------------------------
+    COLOR for MSX-DOS
+       v1.0 by GDX
+--------------------------
+
+This is a command for MSX-DOS1/2 that allows you to change
+colors under MSX-DOS similarly to COLOR instruction from Basic.
+
+Use:
+
+Usage is like below.
+
+ COLOR <text color>,<background color>,<border color>
+
+Values must be decimals (0-15). Commas are needed.
+Put a space between the command and the first value.
+
+Option:
+
+ COLOR /h
+
+/h option allows you to display the help.
+
+Notes: - COLOR.zasm file is the source code. That is not necessary
+         to run the command.
+       - COLOR command is already included in the MSX-DOS v2.44.

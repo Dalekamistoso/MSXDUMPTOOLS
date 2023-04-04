@@ -1,0 +1,23 @@
+
+--MSX DUMPING TOOLSET BY DRWH0 (2023)--
+
+F1<>F3 -> Floppy Backup
+F4     -> Cartridge/Bios Backup 
+F5     -> Tape Backup
+F6     -> File Manager       (MSX-DOS2)
+F7     -> Assembler IDE/Debugger (MSX2)
+F8     -> Text Editor            (MSX2)
+F9     -> Quick Cartridge Backup
+F10    -> MSX-BASIC     (Reset Fx keys)
+
+--Extra tools (Details in README.TXT)--
+
+Archiving: PMARC2 ZIP LHARC UNARJ XSC/D
+Flashers:  FL/K4/8/16 OPF OPFX OPFXSD
+Loaders:   EXECROM LOADCASX TRCAS ODO
+Dumping:   FDLOAD FDSAVE MGSAVE MGLOAD
+           CAS2TAPE GETROM FDCOPY
+Disktools: SECTOR0 CHKDSK ONEDRIVE
+Others:    IPS4MSX HELP2 TESTRAM SUZ
+
+For MSX1 use "Skew" as text editor

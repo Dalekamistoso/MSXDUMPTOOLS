@@ -1,0 +1,153 @@
+Ficheros en este archivo
+
+ BACKUP .HED Fichero de cabecera para reimpresión
+ BACKUP .DOC Este fichero
+
+ FDLOAD .COM Escribir fichero a sector
+ FDSAVE .COM Lectura de fichero a sector
+ FDCOPY .COM Herramienta de copia de sector a sector
+ MGLOAD .COM Escribir fichero en pseudo-RAM
+ MGSAVE .COM Lee y archiva una MegaROM
+
+
+Introducción
+
+ Es un poco lamentable que no puedas jugar a juegos de MegaROM que hayan sido modificados para pseudo-RAM.
+ Es un poco lamentable que no se pueda jugar a partir de ahora, ¿verdad?
+ De hecho, hay bastante gente que dice que no puede hacer una pseudo-RAM porque no quiere poder jugarla.
+ Así que hice esta herramienta.
+
+ El disco fue preparado para jugar cómodamente con FD virtual.
+ Por favor, haz uso de él para una cómoda construcción del entorno de juego.
+ FDCOPY fue hecho para usar para copiar los datos de NARS.COM.
+ (Cuando uso NARS, grabo con HD y guardo/juego con MO...)
+
+ FDLOAD.COM es un software que escribe el contenido de un archivo en los sectores de un disco.
+ FDSAVE.COM es un software que convierte la imagen del sector de un disco en un archivo.
+ FDCOPY.COM copia la imagen sectorial de un disco tal cual.
+
+ MGLOAD.COM es un software que escribe datos de MegaROM en pseudo-RAM.
+ MGSAVE.COM es un software que convierte los datos de MegaROM en archivos.
+
+ FDLOAD/FDSAVE y MGLOAD/MGSAVE se utilizan en pares.
+
+ cargar/guardar se considera basado en HDD/MO etc.
+ En otras palabras, guardar como archivo en HDD y cargar desde HDD. Esto significa que el archivo se guarda en el HDD y se carga desde el HDD.
+ Ahora no estás confundido sobre cuál era cuál en cargar/guardar, ¿verdad?
+
+ FDLOAD escribe en un sector, MGLOAD escribe en la SRAM de la ranura correspondiente.
+ FDLOAD escribe en el sector, MGLOAD escribe en la SRAM de la ranura correspondiente.
+ Lea atentamente este documento y asegúrese de comprenderlo antes de utilizarlo.
+ FDLOAD/FDLOAD/FDLOAD
+
+
+Cómo utilizar FDLOAD/FDSAVE
+
+ En la línea de comandos de MSX-DOS(2)
+  A>FDLOAD nombrearchivo.ext unidad [/Sxx].
+  A>FDSAVE unidad filename.ext [/Sxx][/Exx|/Nxx].
+  A>FDCOPY unidad(lectura) unidad(escritura) [/Sxx][/Exx|/Nxx]
+ A>FDCOPY
+
+ Es necesario especificar el nombre del archivo y el nombre de la unidad.
+ /Sxx es el número de sector inicial (abreviatura: 0).
+ /Exx es el número del sector final (abreviatura: 1439).
+ /Nxx es el número de sectores desde el sector inicial (abreviatura: 1440).
+  (Para /Exx y /Nxx, utilice el que prefiera).
+
+ Además,
+  A>FDLOAD
+  A>FDSAVE
+  A>FDCOPY
+ O
+  A>TIPO FDLOAD.COM
+  A>TYPE FDSAVE.COM
+  A>TIPO FDCOPY.COM
+ mostrará una breve descripción.
+
+
+Cómo utilizar MGLOAD/MGSAVE
+
+ En la línea de comandos de MSX-DOS(2), pulse
+  A>MGLOAD nombrearchivo.ext /Sxx
+  A>MGSAVE nombrearchivo.ext /Sxx[/Nxx].
+ A continuación se enumeran los nombres de archivo y los números de ranura.
+
+ Es necesario especificar el nombre del archivo y el número de ranura.
+ /Sxx es el número de ranura de la MegaROM o pseudo-RAM.
+ /Nxx se utiliza para especificar el número de bancos.
+  (Si se omite /Nxx, se realiza la identificación automática).
+
+ Se muestra cuando se ejecuta MGSAVE,
+  8kB * 10h bancos
+ y,
+  16kB * 20h bancos
+ etc., que se visualizan cuando se ejecuta MGSAVE, por favor tome nota de ellos.
+ (Es una buena idea manejarlos por separado para cada sistema (8kB, 16kB, sin SCC, con SCC, etc.).
+  Es una buena idea mantener un registro separado para cada sistema).
+
+ Además,
+  A>MGLOAD
+  A>MGSAVE
+ se mostrará una breve descripción.
+
+
+Ejemplo de uso
+
+ Al escribir el disco de programa YS2 en G: (FDD) a F: (MO) como archivo
+  En caso de.
+  A>FDSAVE G: F:YS2-PROG.DSK
+
+ Al copiar el archivo creado en ? a otro disquete formateado
+  A>FDLOAD F:Y:YS2-PROG.DSK
+  A>FDLOAD F:YS2-PROG.DSK G:
+
+ Al copiar de G:(FDD) a H:(FDD) cuando se han añadido dos FDDs
+  A>FDCOPY G: H:.
+
+ Cuando se quiere archivar la Mega ROM (Gradius 2) de la ranura 1 en F:.
+  A>MGSAVE F:GRADIUS2.MEG /S1
+
+ Cuando se juega con un pseudo-SCC (slot 1) de una MegaROM archivada anteriormente
+  A>MGLOAD F:GRADIUS2.MEG /S1
+
+
+?Uso conveniente
+
+ -¡Para facilitar la reinstalación!
+  (Ahorra la molestia de MGINST->ESFORM->filecopy->ESET).
+
+  Todo el contenido del disco pseudo-RAM instalado (ranura 1) en un disquete.
+  Si quieres hacer una copia de seguridad en un disco (G:)
+   A>MGSAVE G:ERAMDISK.MEG /S1
+
+  Para volver a escribir el contenido guardado en ?.
+   A>MGLOAD G:ERAMDISK.MEG /S1
+
+ Al copiar vídeo grabado en E:(HD) por NARS a F:(MO)
+  (Suponiendo unidades formateadas con el valor por defecto (32MB) en SFORM.COM)
+   A>FDCOPY E: F: /S28 /Eff07
+
+
+?Caution.
+
+ FDSAVE/FDLOAD/FDCOPY no puede utilizarse para discos que generen errores o estén protegidos.
+ FDSAVE/FDLOAD/FDCOPY no puede utilizarse con discos que generen errores o que estén protegidos.
+ Cancele previamente el comprobador de protección u otro software.
+
+ En FDSAVE/FDLOAD/FDCOPY, parámetros como el número de sectores se basan en 2DD (720kB).
+ El valor por defecto es 2DD (720kB).
+ Para otros parámetros, utilice las opciones /S, /N y /E para especificar los valores adecuados.
+
+ Cuando se utiliza FDLOAD/FDCOPY, el disco del lado de escritura debe formatearse previamente.
+ FDLOAD/FDCOPY, el disco del lado de escritura debe formatearse previamente. No utilice un disco cuyo contenido no deba borrarse.
+ Esto se debe a que los datos se sobrescribirán en el disco del lado en el que se va a escribir mediante FDLOAD/FDCOPY y se perderá el contenido del registro inicial.
+ Los datos se sobrescribirán en el disco en el que se escriba mediante FDLOAD/FDCOPY y se perderá el contenido del registro inicial.
+
+ Cuando pseudo-RAM, pseudo-SCC o MEGA-SCSI funciona como sistema (RAM-, SCC-, SCSI- o MEGA-SCSI-)
+ Cuando la pseudo-RAM, pseudo-SCC o MEGA-SCSI está funcionando como un sistema (cuando se utiliza como RAM-Disk o SCSI), no escriba los datos de la MegaROM con el MGLOAD.
+ No escriba los datos de la MegaROM en el MGLOAD.
+ Sobrescribirá el contenido grabado en la SRAM, el kernel desaparecerá y quedará fuera de control, y todos los archivos almacenados en la pseudo-RA
+ También se perderán todos los archivos almacenados en el disco pseudo-RAM.
+
+ Como precaución común, no es posible especificar un nombre de ruta en el nombre del archivo.
