@@ -153,6 +153,8 @@ Archiving (Compressors/Decompressors)
 
  SOFAUNZIP (Louthrax & Graw)
  Decompressor for ZIP files
+ 
+ Here you have some screenshots of the included programs (all programs rights belongs to their respective owners):
 
 ![MSX Dumping Toolset (DrWh0) (2023) 0001](https://user-images.githubusercontent.com/67012746/229837381-7f32d268-3f59-4ff9-a4e9-e55141b85d84.png)
 ![MSX Dumping Toolset (DrWh0) (2023) 0003](https://user-images.githubusercontent.com/67012746/229837389-d44dd412-23d3-4082-9bcd-6f92bab7ffcc.png)
