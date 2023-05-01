@@ -1,8 +1,8 @@
 -------------------------------------------------------------------------
-ExecROM vr. 1.2a
+ExecROM vr. 1.2c
 for the MSX system
 
-(c) 1996-1999,2001-2002 A&L Software
+(c) 1996-1999,2001-2004 A&L Software
 -------------------------------------------------------------------------
 
         00. Index
@@ -23,13 +23,13 @@ for the MSX system
         01. What is ExecROM
             ---------------
 
-        ExecROM is a program that allow you to execute ROM files on  your 
-MSX1, MSX2, MSX2+ or MSX Turbo R. It can execute 16, 32, 48, 64 (?),  96,
-112, 128, 256, 512 and 768Kb (?!) ROM files.
+        ExecROM is a program that allow you to execute ROM files on  your
+MSX1, MSX2, MSX2+ or MSX Turbo R.It can execute 4, 8, 16, 32, 48, 64, 96,
+112, 128, 256, 512, 768, 1024 and 2048Kb ROM files.
         A ROM file is just a raw image of  MSX  cartridges   and  can  be
 found at various sites on Internet. A ROM image file can be just a 16k or
 32k cartridge or even a 512k MegaROM cartridge.
-        The ROM files were originally for use on MSX emulators, but  with 
+        The ROM files were originally for use on MSX emulators, but  with
 ExecROM you can run them now on your REAL MSX (that's much better than an
 emulator :)!
 
@@ -666,7 +666,7 @@ the logical drives).
 to pay for it. But you only can use, copy or distribute it if  you  don't
 remove  the  author  name  and  enclose  the  three  files:  ExecROM.COM,
 ExecROM.ENG and ExecROM.POR.
-        ExecROM 1.2a can run about 80% of MSX MegaROMs  without needing a
+        ExecROM 1.2c can run about 80% of MSX MegaROMs  without needing a
 patchfile and almost all 16k/32k ROMs.If you discover any bug or have any
 idea or comment, let us know. If a ROM file doesn't run with you (please,
 see the troubleshooting first!), tell us and, if possible, send us a copy
@@ -684,7 +684,7 @@ of supporting Konami Game Collection ROMs; Ricardo  Bittencourt  for  the
 ideia of MegaROM type detection.
         The CoolColors palette and the idea of inclusion  in  ExecROM  is
 from Fabio Ricardo Schmidlin and was used under permission.
-        ExecROM is copyright (c) 1996-1999,2001-2002 A&L Software.Contact
+        ExecROM is copyright (c) 1996-1999,2001-2004 A&L Software.Contact
 at:
 
         alsoftware@alsoftware.com.br
