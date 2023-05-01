@@ -20,4 +20,4 @@ Dumping:   FDLOAD FDSAVE MGSAVE MGLOAD
 Disktools: SECTOR0 CHKDSK ONEDRIVE
 Others:    IPS4MSX HELP2 TESTRAM SUZ
 
-For MSX1 use "Skew" as text editor
+For MSX1 use "skmsx" as text editor

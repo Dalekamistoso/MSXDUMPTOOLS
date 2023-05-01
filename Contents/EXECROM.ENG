@@ -1,8 +1,8 @@
 -------------------------------------------------------------------------
-ExecROM vr. 1.2c
+ExecROM vr. 1.2f
 for the MSX system
 
-(c) 1996-1999,2001-2004 A&L Software
+(c) 1996-1999,2001-2009 A&L Software
 -------------------------------------------------------------------------
 
         00. Index
@@ -278,8 +278,13 @@ option /G2:loads Konami's Game Master II with the ROM  file. This  option
 
 option /H: show a little help of the program.
 
-option /I: diable the autoload of the patchfile. The section 08  of  this
+option /I: disable the autoload of the patchfile. The section 08  of  this
            manual gives more information about the patchfile.
+
+option /K: disable the autoload of an external palette. Without this
+           option, execrom will load a file with the same name as the ROM
+           but with the PLT extension if it is present in the same
+           directory.
 
 option /M: clear MSXDOS from memory and reinitialize all MSX hooks before
            executing the cartridge. Some games require this option.
