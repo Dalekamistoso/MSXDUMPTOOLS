@@ -67,6 +67,9 @@ SAVEROM/GETROM (BiFi)
 MGSAVE/MGLOAD (K. Tsujikawa)
     Command line tool for ROM files
 
+CHUPIN (Marcos Daniel Blanco)
+    Backups cartridges
+
 Tapes
 -----
 
@@ -101,7 +104,7 @@ Flashers
 OPF/OPFX/OPFXSD (Manuel Pazos)
     Tools for Megaflashrom hardware
 
-FL/FL8/FLK4/FL16 (K. Tsujikawa & GDX)
+FL/FL8/FLK4/FL16/UC (K. Tsujikawa & GDX)
     Tools for generic Megaflash family
 
 

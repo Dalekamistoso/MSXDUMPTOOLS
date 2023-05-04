@@ -67,6 +67,9 @@ SAVEROM/GETROM (BiFi)
 MGSAVE/MGLOAD (K. Tsujikawa)
     Command line tool for ROM files
 
+CHUPIN (Marcos Daniel Blanco)
+    Backups cartridges
+
 Tapes
 -----
 
