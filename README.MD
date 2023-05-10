@@ -1,6 +1,6 @@
-=======================================
-= MSX DUMPING TOOLSET BY DRWH0 (2023) =
-=======================================
+MSX DUMPING TOOLSET BY DRWH0 (2023)
+-----------------------------------
+
 
 After testing many programs I made this
 selection of the best tools I found in
