@@ -100,6 +100,9 @@ OPF/OPFX/OPFXSD (Manuel Pazos)
 FL/FL8/FLK4/FL16/UC (K. Tsujikawa & GDX)
     Tools for generic Megaflash family
 
+YAMAFX/YAMAFXEN (FX)
+    Tools for Yamanooto hardware
+
 
 Miscellaneous
 =============
