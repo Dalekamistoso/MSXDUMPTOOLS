@@ -13,7 +13,7 @@ F10    -> MSX-BASIC     (Reset Fx keys)
 --Extra tools (Details in README.TXT)--
 
 Archiving: PMARC2 ZIP LHARC UNARJ XSC/D
-Flashers:  FL/K4/8/16 OPF/X/SD EPROMTST
+Flashers:  FLxx YAMAFXxx OPFxx EPROMTST
 Loaders:   EXECROM LOADCASX TRCAS ODO
 Dumping:   FDLOAD/SAVE/COPY MGSAVE/LOAD
            CAS2TAPE GETROM CHUPIN
@@ -21,3 +21,4 @@ Disktools: SECTOR0 CHKDSK ONEDRIVE
 Others:    IPS4MSX HELP2 TESTRAM SUZ
 
 For MSX1 use "skmsx" as text editor
+
