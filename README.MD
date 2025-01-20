@@ -1,4 +1,4 @@
-MSX DUMPING TOOLSET BY DRWH0 (2023)
+MSX DUMPING TOOLSET BY DRWH0 (2025)
 -----------------------------------
 
 
@@ -115,6 +115,9 @@ ONEDRIVE (A&L Software)
 
 HELP2 
     Lists included tools
+
+Z80BENCH (NataliaPC)
+    CPU Speed Test
 
 
 Repair & Testing
