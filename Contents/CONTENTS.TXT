@@ -1,5 +1,5 @@
 
---MSX DUMPING TOOLSET BY DRWH0 (2023)--
+--MSX DUMPING TOOLSET BY DRWH0 (2025)--
 
 F1<>F3 -> Floppy Backup
 F4     -> Cartridge/Bios Backup 
@@ -18,7 +18,7 @@ Loaders:   EXECROM LOADCASX TRCAS ODO
 Dumping:   FDLOAD/SAVE/COPY MGSAVE/LOAD
            CAS2TAPE GETROM CHUPIN
 Disktools: SECTOR0 CHKDSK ONEDRIVE
-Others:    IPS4MSX HELP2 TESTRAM SUZ
+Others:    IPS4MSX TESTRAM SUZ Z80BENCH
 
 For MSX1 use "skmsx" as text editor
 
